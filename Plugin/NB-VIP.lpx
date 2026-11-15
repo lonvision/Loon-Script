@@ -1,0 +1,19 @@
+#!name=NB Pro 永久 VIP
+#!desc=拦截 NB Pro 配置响应，解密后把 adVIPForever / adFree / adFreeTime 改为永久会员再加密回写。仅修改本机收到的响应，不改变服务器账户权益。
+#!author=local
+#!homepage=https://nbtool8.com
+#!system=iOS
+#!tag=NBPro,会员,工具
+#!date=2026-11-15
+
+[Rule]
+
+[Rewrite]
+
+[Script]
+http-response ^https?:\/\/nbtool8\.com(?::9527)?\/nb\/app\/?(?:\?|$) script-path=https://raw.githubusercontent.com/lonvision/Loon-Script/master/JS/nb-vip-local.js, requires-body=true, timeout=15, tag=NB永久VIP
+
+# 目标接口是 HTTP（nbtool8.com:9527），明文即可拦截，无需 MITM 证书。
+# 若日后 NB 改用 HTTPS，取消下面一行注释，并确保 Loon 的 CA 证书已在系统中信任。
+# [MITM]
+# hostname = nbtool8.com
