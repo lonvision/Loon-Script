@@ -1,0 +1,18 @@
+#!name=Storm Sniffer 终身版 A
+#!desc=解密并改写 Storm Sniffer 会员资料响应，解锁会员与功能入口。仅作用于本机收到的响应，不改动后台账户。
+#!author=local
+#!homepage=https://api.x-storm.com
+#!icon=https://static.x-storm.com/vip/f1.png
+#!system=iOS
+#!tag=StormSniffer,会员,工具
+#!date=2026-11-15
+
+[Rule]
+
+[Rewrite]
+
+[Script]
+http-response ^https:\/\/api\.x-storm\.com\/app\/user-profile\/?(?:\?|$) script-path= https://github.com/lonvision/Loon-Script/blob/master/JS/StormSniffer-LifetimeA.loon.js, requires-body=true, timeout=15, tag=StormSniffer会员资料
+
+[MITM]
+hostname = api.x-storm.com
