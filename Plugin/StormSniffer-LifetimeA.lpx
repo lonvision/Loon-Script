@@ -12,7 +12,7 @@
 [Rewrite]
 
 [Script]
-http-response ^https:\/\/api\.x-storm\.com\/app\/user-profile\/?(?:\?|$) script-path= https://github.com/lonvision/Loon-Script/blob/master/JS/StormSniffer-LifetimeA.loon.js, requires-body=true, timeout=15, tag=StormSniffer会员资料
+http-response ^https:\/\/api\.x-storm\.com\/app\/user-profile\/?(?:\?|$) script-path=https://github.com/lonvision/Loon-Script/blob/master/JS/StormSniffer-LifetimeA.loon.js, requires-body=true, timeout=15, tag=StormSniffer会员资料
 
 [MITM]
 hostname = api.x-storm.com
